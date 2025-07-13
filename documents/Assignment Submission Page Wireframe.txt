@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment Submission Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <div class="flex">
+        <!-- Sidebar -->
+        <aside class="w-64 bg-white shadow-md">
+            <div class="p-4">
+                <h2 class="text-xl font-bold">Navigation</h2>
+            </div>
+            <nav class="mt-4">
+                <ul>
+                    <li class="py-2 px-4 hover:bg-gray-200"><a href="#">Dashboard</a></li>
+                    <li class="py-2 px-4 hover:bg-gray-200"><a href="#">Courses</a></li>
+                    <li class="py-2 px-4 hover:bg-gray-200"><a href="#">Calendar</a></li>
+                    <li class="py-2 px-4 hover:bg-gray-200"><a href="#">Messages</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 p-6">
+            <!-- Header -->
+            <header class="flex items-center justify-between bg-white p-4 shadow">
+                <div class="flex items-center">
+                    <h1 class="text-2xl font-bold">Assignment Submission</h1>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <div class="relative">
+                        <input type="text" placeholder="Search..." class="border rounded-lg p-2" />
+                    </div>
+                    <div class="relative">
+                        <button class="p-2 text-gray-600"><i class="fas fa-bell"></i></button>
+                    </div>
+                    <div class="relative">
+                        <button class="p-2 text-gray-600"><i class="fas fa-user-circle"></i></button>
+                        <div class="absolute right-0 mt-2 w-48 bg-white shadow-lg rounded-lg">
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-200">Settings</a>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-200">Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Assignment Details -->
+            <section class="bg-white p-4 rounded-lg shadow mt-6">
+                <h2 class="text-xl font-bold">Assignment Title</h2>
+                <p class="mt-2">Description: This assignment requires you to analyze the given data and provide insights.</p>
+                <p class="mt-2"><strong>Due Date:</strong> MM/DD/YYYY</p>
+            </section>
+
+            <!-- Instructions & Grading Rubric -->
+            <div class="bg-white p-4 rounded-lg shadow mt-6">
+                <h3 class="text-lg font-semibold">Instructions</h3>
+                <p class="mt-2">Please follow the guidelines provided and submit your work by the due date.</p>
+                <h3 class="text-lg font-semibold mt-4">Grading Rubric</h3>
+                <ul class="list-disc list-inside mt-2">
+                    <li>Criteria 1: 40%</li>
+                    <li>Criteria 2: 30%</li>
+                    <li>Criteria 3: 30%</li>
+                </ul>
+            </div>
+
+            <!-- File Upload Area -->
+            <div class="bg-white p-4 rounded-lg shadow mt-6">
+                <h3 class="text-lg font-semibold">File Upload</h3>
+                <input type="file" class="mt-2 border rounded-lg p-2" />
+                <button class="mt-4 bg-blue-500 text-white rounded-lg px-4 py-2">Submit Assignment</button>
+                <p class="mt-2 text-gray-600"><a href="#" class="text-blue-500">View Previous Submissions</a></p>
+            </div>
+
+            <!-- Feedback Section -->
+            <section class="bg-white p-4 rounded-lg shadow mt-6">
+                <h2 class="text-xl font-semibold">Feedback</h2>
+                <p class="mt-2"><strong>Grade:</strong> A</p>
+                <p class="mt-2"><strong>Comments:</strong> Great job! Your analysis was thorough and well presented.</p>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

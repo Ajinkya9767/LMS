@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <div class="flex">
+        <!-- Sidebar -->
+        <aside class="w-64 bg-white shadow-md">
+            <div class="p-4">
+                <h2 class="text-xl font-bold">Navigation</h2>
+            </div>
+            <nav class="mt-4">
+                <ul>
+                    <li class="py-2 px-4 hover:bg-gray-200"><a href="#">Dashboard</a></li>
+                    <li class="py-2 px-4 hover:bg-gray-200"><a href="#">Users</a></li>
+                    <li class="py-2 px-4 hover:bg-gray-200"><a href="#">Courses</a></li>
+                    <li class="py-2 px-4 hover:bg-gray-200"><a href="#">Reports</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 p-6">
+            <!-- Header -->
+            <header class="flex items-center justify-between bg-white p-4 shadow">
+                <div class="flex items-center">
+                    <h1 class="text-2xl font-bold">Admin Dashboard</h1>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <div class="relative">
+                        <input type="text" placeholder="Search..." class="border rounded-lg p-2" />
+                    </div>
+                    <div class="relative">
+                        <button class="p-2 text-gray-600"><i class="fas fa-bell"></i></button>
+                    </div>
+                    <div class="relative">
+                        <button class="p-2 text-gray-600"><i class="fas fa-user-circle"></i></button>
+                        <div class="absolute right-0 mt-2 w-48 bg-white shadow-lg rounded-lg">
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-200">Settings</a>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-200">Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- User Management -->
+            <section class="bg-white p-4 rounded-lg shadow mt-6">
+                <h2 class="text-xl font-bold">User Management</h2>
+                <ul class="mt-4">
+                    <li class="py-2 border-b">User 1 - Role: Student</li>
+                    <li class="py-2 border-b">User 2 - Role: Instructor</li>
+                    <li class="py-2 border-b">User 3 - Role: Admin</li>
+                </ul>
+                <button class="mt-4 bg-green-500 text-white rounded-lg px-4 py-2">Add New User</button>
+            </section>
+
+            <!-- Course Management -->
+            <div class="bg-white p-4 rounded-lg shadow mt-6">
+                <h2 class="text-xl font-bold">Course Management</h2>
+                <ul class="mt-4">
+                    <li class="py-2 border-b">Course 1 - <span class="text-blue-500">Edit</span></li>
+                    <li class="py-2 border-b">Course 2 - <span class="text-blue-500">Edit</span></li>
+                    <li class="py-2 border-b">Course 3 - <span class="text-blue-500">Edit</span></li>
+                </ul>
+                <button class="mt-4 bg-green-500 text-white rounded-lg px-4 py-2">Add New Course</button>
+            </div>
+
+            <!-- Analytics & Reports -->
+            <div class="bg-white p-4 rounded-lg shadow mt-6">
+                <h2 class="text-xl font-bold">Analytics & Reports</h2>
+                <p class="mt-2">Generate reports on student progress and course completion.</p>
+                <div class="mt-4 border rounded-lg p-4">
+                    <h3 class="font-semibold">Progress Charts</h3>
+                    <canvas id="analyticsChart" class="border rounded-lg mt-2"></canvas>
+                </div>
+                <ul class="mt-4">
+                    <li class="py-2 border-b">Report 1 - <span class="text-blue-500">View</span></li>
+                    <li class="py-2 border-b">Report 2 - <span class="text-blue-500">View</span></li>
+                </ul>
+            </div>
+
+            <!-- Notifications Section -->
+            <div class="bg-white p-4 rounded-lg shadow mt-6">
+                <h2 class="text-xl font-bold">System Notifications</h2>
+                <textarea class="mt-2 border rounded-lg w-full p-2" rows="4" placeholder="Send announcements..."></textarea>
+                <button class="mt-2 bg-blue-500 text-white rounded-lg px-4 py-2">Send Notification</button>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
